@@ -1,0 +1,1565 @@
+/* =========================================================
+   SHAPE BUILDER WORKSHOP
+   Main Website Stylesheet
+   ========================================================= */
+
+/* =========================
+   1. GENERAL
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --mint: #c8f0df;
+    --mint-dark: #78cfa9;
+
+    --blue: #1e4775;
+    --light-blue: #e8f6fb;
+
+    --yellow: #ffe45e;
+    --orange: #ff9b57;
+
+    --green: #70d86f;
+    --light-green: #d9f1d8;
+
+    --peach: #ffe0d8;
+
+    --white: #ffffff;
+    --black: #222222;
+
+    --shadow: 0 7px 0 rgba(30, 71, 117, 0.18);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--black);
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.18) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.18) 1px,
+            transparent 1px
+        ),
+        var(--mint);
+
+    background-size: 28px 28px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================
+   2. HEADER
+   ========================= */
+
+.site-header {
+    min-height: 72px;
+
+    padding: 12px 28px;
+
+    background: rgba(201, 240, 223, 0.97);
+
+    border-bottom: 3px solid var(--black);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 50;
+}
+
+
+/* Website logo */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    font-weight: 900;
+
+    letter-spacing: 0.5px;
+
+    color: var(--blue);
+
+    white-space: nowrap;
+}
+
+.brand span {
+    margin-right: 7px;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+}
+
+nav a {
+    padding: 11px 15px;
+
+    border-radius: 13px;
+
+    font-weight: 900;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+nav a:hover {
+    background: var(--yellow);
+
+    transform: translateY(-2px);
+}
+
+nav a.active {
+    background: var(--orange);
+
+    box-shadow:
+        0 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   3. COMMON PAGE
+   ========================= */
+
+.page-width {
+    width: min(
+        1120px,
+        calc(100% - 32px)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   4. HOME PAGE
+   ========================= */
+
+.home-hero {
+    min-height: 590px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 60px 20px;
+}
+
+
+/* Main hero content */
+
+.hero-content {
+    max-width: 900px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Small heading */
+
+.eyebrow {
+    margin-bottom: 15px;
+
+    color: var(--blue);
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+/* Main heading */
+
+.home-hero h1 {
+    margin: 12px 0;
+
+    color: var(--blue);
+
+    line-height: 1.05;
+
+    font-size:
+        clamp(
+            42px,
+            7vw,
+            78px
+        );
+}
+
+
+/* Yellow title */
+
+.home-hero h1 span {
+    color: #f5dc00;
+
+    text-shadow:
+        3px 3px 0 #6c8500;
+}
+
+
+/* Hero description */
+
+.hero-copy {
+    font-size: 20px;
+
+    font-weight: 700;
+
+    margin: 20px auto;
+}
+
+
+/* =========================
+   5. HOME BUTTONS
+   ========================= */
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-top: 32px;
+}
+
+
+/* General big button */
+
+.big-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 56px;
+
+    padding: 17px 25px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #8ba5c2;
+
+    color: var(--black);
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease;
+}
+
+.big-button:hover {
+    transform: translateY(-3px);
+
+    filter: brightness(1.05);
+}
+
+
+/* Small button */
+
+.small-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #8ba5c2;
+
+    color: var(--black);
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease;
+}
+
+.small-button:hover {
+    transform: translateY(-3px);
+
+    filter: brightness(1.05);
+}
+
+
+/* White secondary button */
+
+.small-button.secondary {
+    background: var(--white);
+}
+
+
+/* =========================
+   6. DECORATIVE SHAPES
+   ========================= */
+
+.shape-decor {
+    position: absolute;
+
+    opacity: 0.65;
+
+    z-index: 1;
+}
+
+
+/* Cube */
+
+.cube-decor {
+    width: 110px;
+    height: 110px;
+
+    left: 7%;
+    top: 25%;
+
+    border: 5px solid #5baea1;
+
+    transform: rotate(10deg);
+
+    box-shadow:
+        25px 20px 0 -4px
+        rgba(91, 174, 161, 0.45);
+}
+
+
+/* Pyramid */
+
+.pyramid-decor {
+    right: 9%;
+    top: 25%;
+
+    width: 0;
+    height: 0;
+
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+
+    border-bottom: 120px solid var(--orange);
+}
+
+
+/* Sphere */
+
+.sphere-decor {
+    right: 12%;
+    bottom: 12%;
+
+    width: 85px;
+    height: 85px;
+
+    border-radius: 50%;
+
+    background: var(--yellow);
+
+    border: 4px solid #d2ae00;
+}
+
+
+/* =========================
+   7. HOME FEATURE CARDS
+   ========================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding-bottom: 55px;
+}
+
+
+.feature-card {
+    padding: 26px;
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    border: 3px solid var(--blue);
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.feature-icon {
+    font-size: 42px;
+}
+
+
+.feature-card h2 {
+    margin: 8px 0;
+
+    color: var(--blue);
+}
+
+
+.feature-card p {
+    min-height: 48px;
+
+    line-height: 1.5;
+}
+
+
+.card-button {
+    display: inline-block;
+
+    padding: 11px 15px;
+
+    background: var(--yellow);
+
+    border-radius: 12px;
+
+    font-weight: 900;
+}
+
+
+/* =========================
+   8. FOOTER
+   ========================= */
+
+footer {
+    padding: 25px;
+
+    background: var(--blue);
+
+    color: white;
+
+    text-align: center;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   LEARN PAGE
+   ========================================================= */
+
+.learn-page {
+    padding: 42px 0 60px;
+}
+
+
+/* Page title */
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.section-heading h1 {
+    margin: 10px 0;
+
+    font-size:
+        clamp(
+            40px,
+            6vw,
+            66px
+        );
+
+    color: #f5dc00;
+
+    text-shadow:
+        3px 3px 0 #6c8500;
+}
+
+
+.section-heading p {
+    font-weight: 800;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   CATEGORY
+   ========================= */
+
+.learn-block {
+    margin-bottom: 35px;
+}
+
+
+.category-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 14px;
+}
+
+
+.category-heading h2 {
+    margin: 0;
+
+    color: var(--blue);
+}
+
+
+.category-heading p {
+    margin: 0;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   SHAPE GRID
+   ========================= */
+
+.shape-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* Shape card */
+
+.shape-card {
+    width: 100%;
+
+    border: 3px solid var(--blue);
+
+    border-radius: 20px;
+
+    padding: 14px;
+
+    cursor: pointer;
+
+    font: inherit;
+
+    color: var(--black);
+
+    box-shadow:
+        0 6px 0
+        rgba(30, 71, 117, 0.15);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+.shape-card:hover {
+    transform:
+        translateY(-5px)
+        rotate(-0.5deg);
+
+    box-shadow:
+        0 10px 0
+        rgba(30, 71, 117, 0.15);
+}
+
+
+/* Prism cards */
+
+.prism-card {
+    background: var(--light-green);
+}
+
+
+/* Non-prism cards */
+
+.nonprism-card {
+    background: var(--peach);
+}
+
+
+/* Shape area */
+
+.card-shape {
+    height: 190px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: var(--light-blue);
+
+    border-radius: 14px;
+}
+
+
+/* Shape title */
+
+.shape-card strong {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 19px;
+}
+
+
+/* Shape category */
+
+.shape-card span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    color: var(--blue);
+
+    font-weight: 900;
+}
+
+
+/* =========================
+   SHAPE SVG
+   ========================= */
+
+.shape-svg {
+    width: 210px;
+
+    max-width: 100%;
+
+    height: 210px;
+}
+
+
+/* Highlighted face */
+
+.shape-svg .hl {
+    fill: var(--yellow) !important;
+}
+
+
+/* Highlighted flat face */
+
+.shape-svg .hl-fill {
+    fill: var(--yellow) !important;
+}
+
+
+/* Highlighted edge */
+
+.shape-svg .edge-hl {
+    stroke: #ff6e4a !important;
+
+    stroke-width: 7 !important;
+
+    fill: none !important;
+}
+
+
+/* Highlighted vertex */
+
+.shape-svg .vertex-hl {
+    fill: #ff6e4a;
+
+    stroke: #ff6e4a;
+}
+
+
+/* =========================
+   PRISM VS NON-PRISM
+   ========================= */
+
+.compare-box {
+    padding: 25px;
+
+    margin: 35px 0;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    border: 3px solid var(--blue);
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.compare-box h2 {
+    color: var(--blue);
+
+    text-align: center;
+}
+
+
+.compare-columns {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 25px;
+}
+
+
+.compare-columns > div {
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background: var(--light-blue);
+}
+
+
+.compare-columns > div:last-child {
+    background: var(--peach);
+}
+
+
+.compare-columns h3 {
+    color: var(--blue);
+}
+
+
+/* =========================
+   BOTTOM NAVIGATION
+   ========================= */
+
+.bottom-nav {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   SHAPE POPUP
+   ========================================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(20, 45, 65, 0.62);
+
+    display: none;
+
+    place-items: center;
+
+    padding: 20px;
+
+    z-index: 100;
+}
+
+
+.modal.show {
+    display: grid;
+}
+
+
+/* Popup box */
+
+.modal-card {
+    width: min(
+        900px,
+        100%
+    );
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: var(--light-blue);
+
+    border-radius: 25px;
+
+    border: 4px solid white;
+
+    box-shadow:
+        0 15px 45px
+        rgba(0, 0, 0, 0.25);
+
+    padding: 28px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 25px;
+
+    position: relative;
+}
+
+
+/* Close button */
+
+.close-button {
+    position: absolute;
+
+    right: 15px;
+
+    top: 12px;
+
+    border: none;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #ef3e3e;
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+}
+
+
+/* Popup shape */
+
+#modalShape {
+    display: grid;
+
+    place-items: center;
+
+    min-height: 380px;
+}
+
+
+/* Popup title */
+
+.modal-info h2 {
+    font-size: 34px;
+
+    color: var(--blue);
+}
+
+
+/* Feature buttons */
+
+.feature-buttons {
+    display: grid;
+
+    gap: 10px;
+}
+
+
+.feature-buttons button {
+    border: none;
+
+    border-radius: 13px;
+
+    background: var(--yellow);
+
+    padding: 14px;
+
+    font: inherit;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        transform 0.15s ease;
+}
+
+
+.feature-buttons button:hover {
+    transform: translateX(4px);
+}
+
+
+.feature-buttons button.selected {
+    outline:
+        4px solid #74dcae;
+}
+
+
+/* Feature explanation */
+
+.feature-message {
+    margin-top: 15px;
+
+    background: #bcebd4;
+
+    border-radius: 14px;
+
+    padding: 16px;
+
+    font-weight: 800;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   BUILD & COMPARE
+   ========================================================= */
+
+.build-page {
+    padding: 42px 0 60px;
+}
+
+
+/* Mission box */
+
+.mission-panel {
+    padding: 22px;
+
+    margin-bottom: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    border: 3px solid var(--blue);
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.mission-panel h2 {
+    color: var(--blue);
+}
+
+
+/* Mission buttons */
+
+.mission-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.mission-buttons button {
+    border: 2px solid var(--blue);
+
+    background: white;
+
+    padding: 11px 13px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font: inherit;
+
+    font-weight: 800;
+}
+
+
+.mission-buttons button:hover {
+    background: var(--yellow);
+}
+
+
+.mission-buttons button.selected {
+    background: var(--orange);
+}
+
+
+/* =========================
+   BUILD AREA
+   ========================= */
+
+.build-stage {
+    display: grid;
+
+    grid-template-columns:
+        1fr 70px 1fr;
+
+    gap: 15px;
+
+    align-items: center;
+}
+
+
+/* Net card */
+
+.net-card {
+    padding: 20px;
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    border: 3px solid var(--blue);
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.net-card h2 {
+    color: var(--blue);
+}
+
+
+/* Net display */
+
+.net-area {
+    min-height: 240px;
+
+    background: var(--light-blue);
+
+    border-radius: 18px;
+
+    display: grid;
+
+    place-items: center;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* After build */
+
+.net-area.built {
+    transform:
+        rotateX(8deg)
+        scale(0.95);
+
+    box-shadow:
+        inset 0 0 0 5px
+        #74dcae;
+}
+
+
+/* Net SVG */
+
+.net-svg {
+    width: 100%;
+
+    max-width: 320px;
+
+    height: 210px;
+}
+
+
+/* VS */
+
+.vs-badge {
+    display: grid;
+
+    place-items: center;
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: var(--yellow);
+
+    font-weight: 900;
+
+    color: var(--blue);
+}
+
+
+/* No sphere net */
+
+.no-net {
+    padding: 20px;
+
+    text-align: center;
+
+    font-weight: 800;
+}
+
+
+/* Hide element */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* Comparison */
+
+.comparison-shapes {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+    text-align: center;
+}
+
+
+.comparison-shapes > div {
+    background: var(--light-blue);
+
+    border-radius: 18px;
+
+    padding: 10px;
+}
+
+
+/* Answer buttons */
+
+.answer-buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+.answer-buttons button {
+    border: 3px solid var(--blue);
+
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 14px;
+
+    cursor: pointer;
+
+    font: inherit;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CHALLENGE
+   ========================================================= */
+
+.challenge-page {
+    padding: 42px 0 60px;
+}
+
+
+/* Quiz */
+
+.quiz-card {
+    padding: 28px;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    border: 3px solid var(--blue);
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* Question top */
+
+.quiz-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-weight: 900;
+
+    color: var(--blue);
+}
+
+
+/* Quiz shape */
+
+.quiz-shape {
+    display: grid;
+
+    place-items: center;
+
+    min-height: 250px;
+}
+
+
+/* Question */
+
+.quiz-card h2 {
+    text-align: center;
+
+    color: var(--blue);
+
+    line-height: 1.4;
+}
+
+
+/* Answers */
+
+.answer-options {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 13px;
+}
+
+
+.answer-options button {
+    border: 3px solid var(--blue);
+
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+    cursor: pointer;
+
+    font: inherit;
+
+    font-weight: 800;
+}
+
+
+.answer-options button:hover {
+    background: var(--light-blue);
+}
+
+
+.answer-options button:disabled {
+    cursor: default;
+}
+
+
+/* Correct answer */
+
+.correct-answer {
+    background: #bcebd4 !important;
+
+    border-color: #38a46d !important;
+}
+
+
+/* Wrong answer */
+
+.wrong-answer {
+    background: #ffd1ca !important;
+
+    border-color: #e45c4e !important;
+}
+
+
+/* Feedback */
+
+.feedback {
+    min-height: 28px;
+
+    margin: 18px 0;
+
+    text-align: center;
+
+    font-weight: 900;
+}
+
+
+.feedback.correct {
+    color: #167448;
+}
+
+
+.feedback.wrong {
+    color: #b4372b;
+}
+
+
+/* =========================
+   RESULT
+   ========================= */
+
+.result-card {
+    padding: 28px;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    border: 3px solid var(--blue);
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+}
+
+
+.trophy {
+    font-size: 75px;
+}
+
+
+.result-card h2 {
+    color: var(--blue);
+
+    font-size: 40px;
+}
+
+
+/* Certificate */
+
+.certificate-box {
+    background: var(--light-blue);
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    margin-top: 20px;
+}
+
+
+.certificate-box label {
+    display: block;
+
+    font-weight: 900;
+
+    margin-bottom: 10px;
+}
+
+
+.certificate-box input {
+    width: min(
+        400px,
+        100%
+    );
+
+    padding: 13px;
+
+    border: 2px solid var(--blue);
+
+    border-radius: 10px;
+
+    font: inherit;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .site-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    nav {
+        justify-content: flex-start;
+    }
+
+
+    .feature-grid,
+    .shape-grid,
+    .compare-columns {
+        grid-template-columns: 1fr;
+    }
+
+
+    .build-stage {
+        grid-template-columns: 1fr;
+    }
+
+
+    .vs-badge {
+        margin: auto;
+    }
+
+
+    .modal-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .answer-options {
+        grid-template-columns: 1fr;
+    }
+
+
+    .answer-buttons {
+        grid-template-columns: 1fr;
+    }
+
+
+    .bottom-nav {
+        flex-direction: column;
+    }
+
+
+    .cube-decor {
+        left: -20px;
+    }
+
+
+    .pyramid-decor {
+        right: -30px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 520px) {
+
+    .site-header {
+        padding: 12px 16px;
+    }
+
+
+    nav a {
+        padding: 8px 9px;
+
+        font-size: 13px;
+    }
+
+
+    .home-hero {
+        min-height: 520px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .big-button {
+        width: 100%;
+    }
+
+
+    .home-hero h1 {
+        font-size: 43px;
+    }
+
+
+    .card-shape {
+        height: 170px;
+    }
+
+
+    .modal-card {
+        padding: 20px;
+    }
+
+
+    #modalShape {
+        min-height: 280px;
+    }
+}
